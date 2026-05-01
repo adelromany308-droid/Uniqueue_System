@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - UniQueue</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-users-rays"></i>
+        <span>UniQueue</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="queue-status.html">Queue Status</a></li>
+      </ul>
+      
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Container -->
+  <div class="login-container">
+    <div class="card login-card">
+      <div class="card-header">
+        <div class="logo">
+          <i class="fas fa-users-rays"></i>
+          <span>UniQueue</span>
+        </div>
+        <h3>Welcome Back!</h3>
+        <p>Login to access your dashboard</p>
+      </div>
+      
+      <div class="card-body">
+        <form action="dashboard.html" method="GET">
+          <div class="form-group">
+            <label for="email" class="form-label">
+              <i class="fas fa-envelope"></i> Email Address
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              class="form-input" 
+              placeholder="student@university.edu"
+              required
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="password" class="form-label">
+              <i class="fas fa-lock"></i> Password
+            </label>
+            <input 
+              type="password" 
+              id="password" 
+              class="form-input" 
+              placeholder="Enter your password"
+              required
+            >
+          </div>
+          
+          <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <input type="checkbox" style="width: auto;">
+              <span style="font-size: 0.9rem; color: var(--text-light);">Remember me</span>
+            </label>
+            <a href="#" style="color: var(--primary-blue); font-size: 0.9rem; font-weight: 600;">Forgot Password?</a>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fas fa-sign-in-alt"></i>
+            Login
+          </button>
+        </form>
+        
+        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--light-gray);">
+          <p style="margin-bottom: 0.5rem;">Don't have an account?</p>
+          <a href="#" style="color: var(--primary-blue); font-weight: 600;">Contact IT Support</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <p style="font-size: 0.85rem; color: var(--secondary-gray);">
+            <i class="fas fa-info-circle"></i> Use your university credentials to login
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About UniQueue</h4>
+          <p>UniQueue is a smart queue management system designed to streamline university services and improve student experience.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="queue-status.html">Queue Status</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> support@uniqueue.edu</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-location-dot"></i> University Campus, Building A</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Support Hours</h4>
+          <ul class="footer-links">
+            <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+            <li>Saturday: 9:00 AM - 1:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 UniQueue. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--danger-red);"></i> for Students</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

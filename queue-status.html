@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Status - UniQueue</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-users-rays"></i>
+        <span>UniQueue</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="queue-status.html" class="active">Queue Status</a></li>
+      </ul>
+      
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Queue Status Page -->
+  <section class="queue-status">
+    <div class="container">
+      <!-- Page Header -->
+      <div class="text-center mb-4">
+        <h2>Live Queue Status</h2>
+        <p>Real-time queue information for Registration Services</p>
+        <div style="margin-top: 1rem;">
+          <span class="badge badge-success">
+            <i class="fas fa-circle" style="font-size: 0.5rem;"></i> System Online
+          </span>
+          <span style="margin-left: 1rem; color: var(--text-light);">
+            <i class="fas fa-clock"></i> Last updated: Just now
+          </span>
+        </div>
+      </div>
+      
+      <!-- Current Serving Display -->
+      <div class="card mb-4" style="text-align: center; padding: 3rem 2rem;">
+        <div style="margin-bottom: 1rem;">
+          <h3 style="color: var(--text-light); font-weight: 500;">Now Serving</h3>
+        </div>
+        <div style="font-size: 6rem; font-weight: 700; color: var(--primary-blue); line-height: 1; margin-bottom: 1rem; animation: pulse 2s infinite;">
+          A038
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background-color: rgba(16, 185, 129, 0.1); border-radius: 9999px; color: var(--success-green); font-weight: 600;">
+          <i class="fas fa-check-circle"></i>
+          Counter 3
+        </div>
+      </div>
+      
+      <!-- Stats Overview -->
+      <div class="dashboard-grid mb-4">
+        <div class="card stat-card">
+          <div class="stat-number">24</div>
+          <div class="stat-label">Total in Queue</div>
+        </div>
+        
+        <div class="card stat-card">
+          <div class="stat-number" style="color: var(--warning-yellow);">15-20</div>
+          <div class="stat-label">Avg Wait Time (min)</div>
+        </div>
+        
+        <div class="card stat-card">
+          <div class="stat-number" style="color: var(--success-green);">156</div>
+          <div class="stat-label">Served Today</div>
+        </div>
+        
+        <div class="card stat-card">
+          <div class="stat-number" style="color: var(--secondary-gray);">4</div>
+          <div class="stat-label">Active Counters</div>
+        </div>
+      </div>
+      
+      <!-- Queue List -->
+      <div class="queue-list-container">
+        <div class="card-header" style="border-bottom: 2px solid var(--light-gray); padding-bottom: 1rem; margin-bottom: 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <h3 class="card-title" style="margin: 0;">
+              <i class="fas fa-list-ol" style="color: var(--primary-blue);"></i>
+              Queue Numbers
+            </h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 20px; height: 20px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); border-radius: 4px;"></div>
+                <span style="font-size: 0.9rem; color: var(--text-light);">Current</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 20px; height: 20px; background-color: var(--success-green); border-radius: 4px;"></div>
+                <span style="font-size: 0.9rem; color: var(--text-light);">Served</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 20px; height: 20px; background-color: var(--warning-yellow); border-radius: 4px;"></div>
+                <span style="font-size: 0.9rem; color: var(--text-light);">Waiting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="queue-list">
+          <!-- Served numbers -->
+          <div class="queue-item served">A001</div>
+          <div class="queue-item served">A002</div>
+          <div class="queue-item served">A003</div>
+          <div class="queue-item served">A004</div>
+          <div class="queue-item served">A005</div>
+          <div class="queue-item served">A006</div>
+          <div class="queue-item served">A007</div>
+          <div class="queue-item served">A008</div>
+          <div class="queue-item served">A009</div>
+          <div class="queue-item served">A010</div>
+          <div class="queue-item served">A011</div>
+          <div class="queue-item served">A012</div>
+          <div class="queue-item served">A013</div>
+          <div class="queue-item served">A014</div>
+          <div class="queue-item served">A015</div>
+          <div class="queue-item served">A016</div>
+          <div class="queue-item served">A017</div>
+          <div class="queue-item served">A018</div>
+          <div class="queue-item served">A019</div>
+          <div class="queue-item served">A020</div>
+          <div class="queue-item served">A021</div>
+          <div class="queue-item served">A022</div>
+          <div class="queue-item served">A023</div>
+          <div class="queue-item served">A024</div>
+          <div class="queue-item served">A025</div>
+          <div class="queue-item served">A026</div>
+          <div class="queue-item served">A027</div>
+          <div class="queue-item served">A028</div>
+          <div class="queue-item served">A029</div>
+          <div class="queue-item served">A030</div>
+          <div class="queue-item served">A031</div>
+          <div class="queue-item served">A032</div>
+          <div class="queue-item served">A033</div>
+          <div class="queue-item served">A034</div>
+          <div class="queue-item served">A035</div>
+          <div class="queue-item served">A036</div>
+          <div class="queue-item served">A037</div>
+          
+          <!-- Current serving -->
+          <div class="queue-item current">A038</div>
+          
+          <!-- Waiting/Pending numbers -->
+          <div class="queue-item pending">A039</div>
+          <div class="queue-item pending">A040</div>
+          <div class="queue-item pending">A041</div>
+          <div class="queue-item pending">A042</div>
+          <div class="queue-item pending">A043</div>
+          <div class="queue-item pending">A044</div>
+          <div class="queue-item pending">A045</div>
+          <div class="queue-item pending">A046</div>
+          <div class="queue-item pending">A047</div>
+          <div class="queue-item pending">A048</div>
+          <div class="queue-item pending">A049</div>
+          <div class="queue-item pending">A050</div>
+          <div class="queue-item pending">A051</div>
+          <div class="queue-item pending">A052</div>
+          <div class="queue-item pending">A053</div>
+          <div class="queue-item pending">A054</div>
+          <div class="queue-item pending">A055</div>
+          <div class="queue-item pending">A056</div>
+          <div class="queue-item pending">A057</div>
+          <div class="queue-item pending">A058</div>
+          <div class="queue-item pending">A059</div>
+          <div class="queue-item pending">A060</div>
+          <div class="queue-item pending">A061</div>
+          <div class="queue-item pending">A062</div>
+        </div>
+      </div>
+      
+      <!-- Additional Info -->
+      <div class="dashboard-grid mt-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas fa-info-circle" style="color: var(--primary-blue);"></i>
+              Queue Information
+            </h3>
+          </div>
+          <div class="card-body">
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-circle-check" style="color: var(--success-green); margin-top: 0.25rem;"></i>
+                <span>Please arrive at least 5 minutes before your estimated time</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-circle-check" style="color: var(--success-green); margin-top: 0.25rem;"></i>
+                <span>Bring your student ID and required documents</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-circle-check" style="color: var(--success-green); margin-top: 0.25rem;"></i>
+                <span>Queue numbers expire after 15 minutes of no-show</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-circle-check" style="color: var(--success-green); margin-top: 0.25rem;"></i>
+                <span>Counter hours: Monday-Friday, 8:00 AM - 5:00 PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas fa-building" style="color: var(--primary-blue);"></i>
+              Service Counters
+            </h3>
+          </div>
+          <div class="card-body">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background-color: var(--light-gray); border-radius: var(--border-radius);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <div style="width: 12px; height: 12px; background-color: var(--success-green); border-radius: 50%;"></div>
+                  <span style="font-weight: 600;">Counter 1</span>
+                </div>
+                <span style="color: var(--text-light);">New Admissions</span>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background-color: var(--light-gray); border-radius: var(--border-radius);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <div style="width: 12px; height: 12px; background-color: var(--success-green); border-radius: 50%;"></div>
+                  <span style="font-weight: 600;">Counter 2</span>
+                </div>
+                <span style="color: var(--text-light);">Course Registration</span>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background-color: var(--light-gray); border-radius: var(--border-radius);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <div style="width: 12px; height: 12px; background-color: var(--success-green); border-radius: 50%;"></div>
+                  <span style="font-weight: 600;">Counter 3</span>
+                </div>
+                <span style="color: var(--text-light);">Fee Payment</span>
+              </div>
+              
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background-color: var(--light-gray); border-radius: var(--border-radius);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <div style="width: 12px; height: 12px; background-color: var(--warning-yellow); border-radius: 50%;"></div>
+                  <span style="font-weight: 600;">Counter 4</span>
+                </div>
+                <span style="color: var(--text-light);">General Inquiry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About UniQueue</h4>
+          <p>UniQueue is a smart queue management system designed to streamline university services and improve student experience.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="queue-status.html">Queue Status</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> support@uniqueue.edu</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-location-dot"></i> University Campus, Building A</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Support Hours</h4>
+          <ul class="footer-links">
+            <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
+            <li>Saturday: 9:00 AM - 1:00 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 UniQueue. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--danger-red);"></i> for Students</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
